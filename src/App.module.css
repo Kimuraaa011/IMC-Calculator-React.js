@@ -1,0 +1,251 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+.headerContainer {
+  max-width: 900px;
+  margin: 40px auto;
+}
+
+.main {
+  /* display: flex; */
+  /* justify-content: center;
+  align-items: center; */
+  height: 100vh;
+  width: 100vw;
+}
+
+.container{
+  max-width: 900px;
+  display: flex;
+  margin: auto;
+}
+
+.container .leftSide{
+  flex: 1;
+  margin-right: 40px;
+  height: min-content;
+}
+
+.container .leftSide h1 {
+  font-size: 40px;
+  color:  rgb(22 78 99);
+}
+
+.container .leftSide p {
+  font-size: 16px;
+  color: rgb(22 78 99);
+}
+
+.container .leftSide input{
+  width: 100%;  
+  margin: 20px 0;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border-bottom: 1px solid rgb(214 211 209);
+  outline: none;
+ }
+
+ .container .leftSide input:disabled{
+   opacity: 0.7;
+ }
+
+ .container .leftSide span {
+   display: flex;
+   justify-content: center;
+ }
+
+ .container .leftSide button{
+   /* margin-top: 40px; */
+   margin: 40px auto;
+   width: 98%;
+   height: 40px;
+   cursor: pointer;
+   background-color: rgb(14 116 144);
+   border-radius: 10px;
+   border: none;
+   color: #ffff;
+   transition: all 0.3s ease;
+ }
+ .container .leftSide button:disabled{
+   opacity: 0.7;
+   transform: scaleY(1.05);
+   width: 99.2%;
+ }
+
+ .container .leftSide button:hover {
+   transform: scaleY(1.05);
+   width: 99.2%;
+   opacity: 0.7;
+ }
+
+
+.container .rightSide{
+  flex: 1;
+  padding: 15px 0;
+  flex: 1;
+  margin-left: 40px;
+  display: flex;
+  flex-wrap:wrap ;
+}
+
+.container .rightSide .choose{
+  flex: 1;
+  display: flex;
+  border-radius: 15px;
+  position: relative;
+}
+
+.container .rightSide .arrowContainer{
+  position: absolute;
+  left: -35px;
+  top: 150px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: rgb(14 116 144);
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  transition: all ease 0.3s;
+}
+.container .rightSide .arrowContainer:hover{
+  opacity: 0.8;
+}
+
+.container .rightSide .choose .yourIMC{
+  font-size: 14px;
+  margin-top: 14px;
+  margin-bottom: 28px;
+}
+.container .rightSide .choose .square{
+  flex: 1;
+  display: flex; 
+  justify-content: flex-start;
+  align-items: center; 
+}
+
+.container .rightSide .choose .square .imageContainer{
+  margin-top: 60px;
+  margin-bottom: 30px;
+  width: 80px;
+  height: 80px;
+}
+
+
+
+.container .rightSide .square{
+  width: 45%;
+  margin: 10px;
+  padding: 0 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ffff;
+  font-size: 23px;
+  font-weight: bold;
+}
+
+.container .rightSide .square .imageContainer{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+
+.container .rightSide .square .subtitle{
+  margin-top: 10px;
+  font-size: 12px;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+@media(max-width: 879px){
+  .headerContainer{
+    padding: 0 20px;
+    margin: 10px auto;
+  }
+
+  .container{
+    flex-direction: column;
+    margin: 20px;
+  }
+
+  .container .leftSide {
+    margin-right: 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .container .leftSide input{
+    /* padding-left: 33%; */
+  }
+
+  .container .leftSide span{
+    display: flex;
+    width: 75%;
+  }
+
+  .container .leftSide span button{
+    width: 98%;
+    margin: 0;
+  }
+
+  .container .rightSide{
+    flex: 2;
+    margin: 0 auto;
+    padding-left: 10px;
+    /* padding-left: 40px; */
+    /* padding: 0 auto; */
+  }
+
+  .container .rightSide .square .imageContainer{
+    margin-bottom: 5px; 
+    margin-top: 5px;   
+  }
+
+}
+
+@media(max-width: 449px){
+
+  .container{
+    min-width: 374px;
+  }
+
+  .container .leftSide{
+    margin-left: 10px;
+  }
+
+  .container .rightSide{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: none;
+    margin: 0 auto;
+  }
+
+  .container .rightSide .square{
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+
+
